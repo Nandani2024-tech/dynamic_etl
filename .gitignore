@@ -1,0 +1,17 @@
+# Project-specific files to ignore
+notes.txt
+extract.txt
+.env
+
+# Ignore Python virtual environments
+venv/
+etl/venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
