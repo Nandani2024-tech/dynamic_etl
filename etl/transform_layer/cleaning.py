@@ -32,3 +32,21 @@ def standardize_column_names(df):
         .str.strip("_")
     )
     return df
+
+
+
+def clean_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Full cleaning step for transform layer.
+    - Standardizes column names
+    - Drops fully empty rows
+    - Fills remaining NaNs
+    - Removes duplicates
+    """
+    logger.info("Cleaning dataframe...")
+    df = standardize_column_names(df)
+    df = df.dropna(how="all")
+    df = df.fillna("")
+    df = df.drop_duplicates()
+    logger.info(f"Cleaned dataframe → rows: {len(df)}, columns: {df.columns.tolist()}")
+    return df
