@@ -1,1 +1,1 @@
-from .extract import extract_data, detect_file_type
+from .extractor import extract_data, detect_file_type
