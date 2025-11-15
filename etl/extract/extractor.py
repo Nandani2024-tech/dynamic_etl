@@ -1,4 +1,4 @@
-# etl/extract/extract.py
+# etl/extract/extractor.py
 
 import os
 import time
